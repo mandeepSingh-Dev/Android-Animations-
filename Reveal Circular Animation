@@ -1,0 +1,16 @@
+ private fun createCircularRevealAnimation(): Animator? {
+
+        val endRadius = hypot(
+            binding.activeRecyclerView.width.toDouble(),
+            binding.activeRecyclerView.height.toDouble()
+        ).toInt()
+
+        Log.d("fkvnfkvf",endRadius.toString())
+
+       return  ViewAnimationUtils.createCircularReveal(
+            binding.activeRecyclerView,
+            binding.activeRecyclerView.right,
+            binding.activeRecyclerView.bottom,
+            0f,endRadius.toFloat())
+
+    }
